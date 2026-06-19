@@ -14,7 +14,8 @@ create table contacts (
 );
 
 insert into contacts (name, phone) values 
-  ('Marcelo Baldi (CEO da b2bflow)', '5511994084809');
+  ('Marcelo Baldi (CEO da b2bflow)', '5511994084809'),
+  ('Paulo Henrique', '5548998068954');
 ```
 
 ## 2. Variáveis de Ambiente (.env)
