@@ -23,11 +23,11 @@ def carregar_variaveis():
     zapi_token = os.getenv("ZAPI_TOKEN")
     zapi_client_token = os.getenv("ZAPI_CLIENT_TOKEN", "") # Opcional dependendo da config
 
-    if not all([supabase_url, supabase_key, zapi_instance_id, zapi_token]):
+    if not supabase_url or not supabase_key or not zapi_instance_id or not zapi_token:
         logging.error("Faltam variáveis de ambiente obrigatórias. Verifique seu arquivo .env.")
         exit(1)
         
-    return supabase_url, supabase_key, zapi_instance_id, zapi_token, zapi_client_token
+    return supabase_url, supabase_key, zapi_instance_id, zapi_token, zapi_client_token or ""
 
 def buscar_contatos(supabase: Client):
     """Busca contatos na tabela 'contacts' do Supabase"""
