@@ -14,7 +14,7 @@ create table contacts (
 );
 
 insert into contacts (name, phone) values 
-  ('Marcelo Baldi (CEO da b2bflow)', '5511994084809'),
+  ('Wesllen Correia', '5571993315410'),
   ('Paulo Henrique', '5548998068954');
 ```
 
